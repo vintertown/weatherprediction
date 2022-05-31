@@ -107,7 +107,6 @@ async function getDay(day) {
       break;
   }
   let new_day = m_day + date.getDate();
-  console.log(new_day);
   return new_day;
 }
 //get temperature and rain from wethter api json
