@@ -35,10 +35,10 @@ let tempModel;
 let rainModel;
 async function loadModel() {
   tempModel = await tf.loadLayersModel(
-    "https://raw.githubusercontent.com/vintertown/weatherprediction/main/Model/model.json"
+    "https://raw.githubusercontent.com/vintertown/weatherprediction/main/temperature_model/model.json"
   );
   rainModel = await tf.loadLayersModel(
-    "https://raw.githubusercontent.com/vintertown/weatherprediction/main/Model_Rain/model.json"
+    "https://raw.githubusercontent.com/vintertown/weatherprediction/main/rain_model/model.json"
   );
 }
 loadModel();
