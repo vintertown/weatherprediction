@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="content">
+            <div class="cloud"></div>
+            <div class="cloud x"></div>
+            <div class="sun"></div>
+        </div>  
+<header>
+        
+         
+        <div class="header-wrapper wrapper">
+         
+            <h1>Weather Prediction Model</h1>
+            <h3 class="subheading">-also known as pleb student vs. science-</h3>
+            <div class="fight-wrapper">
+                <h3>Fight!</h3>
+                <img class="fight-gif" src="images/Z0Bl.gif" alt="" >
+            </div>
+            
+        </div>
+    </header>
+    
+    <div class="description-wrapper1 wrapper">
+        <h2>Technology/Libraries</h2>
+        <p>-Keras (Sequential Model)</p>
+        <p>-Pandas, Matplotlib, Numpy, scikit-learn, </p>
+        <p>-TensorFlow.js</p>
+        <p>-OpenWeatherMap API</p>
+        <p>-HTML,CSS and JS</p>
+        <p>-fellow students and funny youtube videos</p>
+    </div>
+
+    <div class="description-wrapper2 wrapper">
+        <h2>Procedure</h2>
+        <p>-data from weater station in Stuttgart</p>
+        <p>-data preperation</p>
+        <p>-simple Sequential model for temperature and rainfall</p>
+        <p>-evalutation and improvements</p>
+        <p>-export as TensorFlow.js</p>
+        <p>-working with RNNs (recurrent neural networks)</p>
+    </div>
+
+    <div class="main-wrapper wrapper">
+        <h2>Result</h2>
+        <p>get temperature and rain prediction for following day(s) in Stuttgart (daily average!)</p>
+        <div class="result-wrapper">
+            <div class="api-wrapper">
+                <h3>Weather API</h3>
+                <img id="api-rb" class="spinning-rainbow sp-r-hidden" src="images/kisspng-pixel-art-rainbow-dash-artist-5aff677522e975.475656191526687605143.png" alt="">
+                <div id="api-buttons" class="api-buttons">
+                    <button onclick="predictionClicked(this,'api',0)" class="button-notclicked">today</button>
+                    <button onclick="predictionClicked(this,'api',1)" class="button-notclicked">tomorrow</button>
+                    <button onclick="predictionClicked(this,'api',2)" class="button-notclicked">the day after tomorrow</button>
+                </div>
+                <div id="temp-wrapper-api" class="temp-wrapper blur">
+                    <div class="city-name">
+                            <h2>Stuttgart</h2>
+                        </div>
+                    <div class="temp-seperator">
+                        <div class="temp-t"> 
+                        
+                        <div class="temp-result">
+                            <p class="temp-desc">day temperature:</p>
+                            <p id="api-temp"></p>
+                        </div>
+                         <div class="temp-result">
+                            <p class="temp-desc">min temperature:</p>
+                            <p id="api-tempMin"></p>
+                        </div>
+                        <div class="temp-result">
+                            <p class="temp-desc">max temperature:</p>
+                            <p id="api-tempMax"></p>
+                        </div>
+                    </div>
+                    <div class="temp-r">
+                        <p class="temp-desc">is it going to rain?</p>
+                        <p id="api-rain"></p>
+                        <p id="api-rain2"></p>
+                    </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+            <div class="hl"></div>
+            <div class="model-wrapper">
+                <h3>Sequential Model</h3>
+                <!--<img id="model-rb" class="spinning-rainbow sp-r-hidden" src="images/kisspng-pixel-art-rainbow-dash-artist-5aff677522e975.475656191526687605143.png" alt="">-->
+                <img id="model-img1" class="model-img1 sp-r-hidden" src="images/3BBS.gif" alt="">
+                <img id="model-img2" class="model-img2 sp-r-hidden" src="images/5Qzn.gif" alt="">
+                <div id="model-buttons" class="model-buttons">
+                    <button onclick="predictionClicked(this,'mod',0)" class="button-notclicked">today</button>
+                    <button onclick="predictionClicked(this,'mod',1)" class="button-notclicked">tomorrow</button>
+                    <button onclick="predictionClicked(this,'mod',2)" class="button-notclicked">the day after tomorrow</button>
+                </div>
+                <div id="temp-wrapper-model" class="temp-wrapper blur">
+                    
+                    <div class="city-name">
+                            <h2>Stuttgart</h2>
+                        </div>
+                    <div class="temp-seperator">
+                        <div class="temp-t"> 
+                        
+                        <div class="temp-result">
+                            <p class="temp-desc">temperature:</p>
+                            <p id="model-temp"></p>
+                        </div>
+                        </div>
+                    <div class="temp-r">
+                        <p class="temp-desc">is it going to rain?</p>
+                        <p id="model-rain"></p>
+                        <p id="model-rain2"></p>
+                    </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
